@@ -1,0 +1,116 @@
+body{
+  background-color: transparent;
+}
+.pokemon-details {
+  margin: 1rem auto; /* Center align the card */
+  padding: 2rem; /* Add padding for spacing */
+  background-color: rgb(193, 247, 229);
+  border-radius: 10px;
+  max-width: 500px; /* Restrict maximum width */
+  width: 90%; /* Responsive to smaller screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  text-align: center; /* Center the name */
+  font-size: 2rem; /* Adjust font size for responsiveness */
+  font-weight: bold;
+}
+
+.evol-chain-heading{
+  text-align: center; 
+  font-size: 1.5rem;
+}
+
+.image-part {
+  width: 100rem; /* Make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center align */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  width: 40px; /* Increased width for better visibility */
+  height: 40px; /* Increased height for better visibility */
+  font-size: 20px; /* Increased font size for larger arrows */
+  line-height: 40px; /* Adjusted to match height */
+  margin-top: 75px; /* Remove unnecessary vertical offset */
+  display: flex;
+  justify-content: center; /* Center align the arrows horizontally */
+  align-items: center; /* Center align the arrows vertically */
+  cursor: pointer; /* Add pointer cursor for better user feedback */
+}
+
+.image-gallery-left-nav:before,
+.image-gallery-right-nav:before {
+  font-size: 25px; /* Increase the size of the arrow icon */
+  color: black; /* Optional: Customize arrow color */
+}
+
+
+.image-gallery-play-button {
+  width: 10px;
+  height: 30px;
+  font-size: 18px;
+  bottom: 10px;
+}
+
+img {
+  max-width: 100px; /* Ensure images do not exceed their container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
+  gap: 1rem;
+  width: 100px; /* Full width */
+  margin: 2rem auto; /* Center the grid and add spacing */
+  padding: 1rem;
+}
+
+.grid-item img {
+  max-width: 75px; /* Restrict image size within grid */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.image-part {
+  width: 100px; /* Make it responsive */
+  height: 25rem; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center align */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evolution-chain {
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically (if needed) */
+  margin-top: 2rem; /* Add spacing from other elements */
+  gap: 1rem; /* Spacing between rows */
+  width: 100px; /* Full width */
+}
+
+.evolution-stage img {
+  width: 75px; /* Adjust to a fixed width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure images fit properly */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.evol-chain-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the entire evolution chain */
+  justify-content: center;
+  margin: 1rem auto; /* Center the container itself */
+  height: auto; /* Maintain aspect ratio */
+}
