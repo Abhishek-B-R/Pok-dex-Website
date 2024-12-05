@@ -64,9 +64,13 @@ function PokemonDetails({ id }) {
         const speciesData = await speciesResponse.json();
 
         const data = [];
+        let ct=0
         for (let i = 0; i < speciesData.flavor_text_entries.length; i++) {
-            data.push(speciesData.flavor_text_entries[i].flavor_text)
-            if(i==1)    break
+            if(speciesData.flavor_text_entries[i].language.name==="en"){
+                data.push(speciesData.flavor_text_entries[i].flavor_text)
+                ct++
+            }
+            if(ct===2)    break
         }
         setSlangData(data);
     }
@@ -108,7 +112,7 @@ function PokemonDetails({ id }) {
     
             // Set the nested evolution chain to state
             setEvolutionChain(evolutionChain);
-            console.log("Evolution Chain:", evolutionChain);
+            // console.log("Evolution Chain:", evolutionChain);
         } catch (error) {
             console.error("Error fetching evolution chain:", error);
         }
