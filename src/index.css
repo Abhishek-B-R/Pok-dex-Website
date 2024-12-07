@@ -96,11 +96,18 @@ input[type="text"] {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 cards per row */
   justify-content: center;
   align-items: center;
   gap: 3.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+  }
+}
+
 
 .pokemon-card {
   width: 36rem;
